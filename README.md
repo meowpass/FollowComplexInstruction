@@ -1,6 +1,7 @@
 # From Complex to Simple: Enhancing Multi-Constraint Complex Instruction Following Ability of Large Language Models
 Official implementation of the paper "From Complex to Simple: Enhancing Multi-Constraint Complex Instruction Following Ability of Large Language Models"
 
+![image](https://github.com/meowpass/FCS/assets/56729976/debacf40-1858-402b-b94a-700e7b7ad20b)
 
 
 ## Get the data

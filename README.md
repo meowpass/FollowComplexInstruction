@@ -23,7 +23,7 @@ python ../get_data/gen_inst.py \
 ```
 
 An example of complex instrutcion is shown as below:
-![image](https://github.com/meowpass/FollowComplexInstruction/assets/56729976/2695ce8e-9e4c-4a73-a969-d8cd88ad1888)
+![image](https://github.com/meowpass/FollowComplexInstruction/assets/56729976/0b00b21b-9be6-439e-92eb-fcb459bbd0e6)
 Here are 3 different constraints in the instructions
 
 #### Do inference with your model

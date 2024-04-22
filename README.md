@@ -5,7 +5,7 @@ Official implementation of the paper "From Complex to Simple: Enhancing Multi-Co
 
 ## 🔥Updates
 * 2024/4/22: We released the data and code of FCS
-* 2024/4/22 We released the first verson of our [paper](https://arxiv.org/xxxxxxx).
+* 2024/4/22 We released the first version of our [paper](https://arxiv.org/xxxxxxx).
 
 ## ⚙️How to use the code
 
@@ -70,7 +70,7 @@ python ../get_data/correct.py \
 
 ### Go for DPO training
 
-Now that you have get the training data, you can utilize them to train your own DPO model. Here, we provide a revised implementation for DPO in `dpo_train`. You can set your model_path and data_path in `dpo_train/dpo_train.py`. Then, you can train the model with the script `train_dpo.sh`:
+Now that you have obtained the training data, you can utilize them to train your own DPO model. Here, we provide a revised implementation for DPO in `dpo_train`. You can set your model_path and data_path in `dpo_train/dpo_train.py`. Then, you can train the model with the script `train_dpo.sh`:
 
 ```shell
 CUDA_VISIBLE_DEVICES=YOUR_CUDA_DEVICES accelerate launch \

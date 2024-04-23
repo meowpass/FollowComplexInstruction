@@ -3,6 +3,7 @@
 [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97-huggingface-yellow)](https://huggingface.co/datasets/Abbey4799/Complex-Instructions-DPO)
 
 Official implementation of the paper "From Complex to Simple: Enhancing Multi-Constraint Complex Instruction Following Ability of Large Language Models". 
+
 We systematically study **how to enhance the ability of LLMs to follow complex instructions**, addressing the following research questions:
 - ***What training data* is effective in enhancing complex constraint-following abilities?**
   - Training with *compositional data* can generally enhance models’ ability to follow complex instructions.
@@ -21,7 +22,7 @@ We systematically study **how to enhance the ability of LLMs to follow complex i
 
 ## 🔥Updates
 * 2024/4/22: We released the data and code of FCS
-* 2024/4/22 We released the first version of our [paper](https://arxiv.org/xxxxxxx).
+<!-- * 2024/4/22 We released the first version of our [paper](https://arxiv.org/xxxxxxx). -->
 
 ## ⚙️How to Use the Code
 
@@ -38,7 +39,10 @@ pip install -r requirements.txt
 
 #### Complex Instruction Synthesis
 
-To obtain compositional data, we first collect seed instructions from three widely used instruction-tuning datasets. Then, we rewrite the instructions to incorporate multiple constraints. Here, you can complete the whole procedure by running the script `gen_inst.sh`:
+To obtain complex instructions: 
+- First, we collect seed instructions from three widely used instruction-tuning datasets. 
+- Then, we rewrite the instructions to incorporate multiple constraints. 
+Here, you can complete the whole procedure by running the script `gen_inst.sh`:
 
 ```shell
 python ../get_data/gen_inst.py \
@@ -51,7 +55,7 @@ An example of complex instrutcion is shown as below:
 ![image](https://github.com/meowpass/FollowComplexInstruction/assets/56729976/cd6810af-d472-42e7-afff-43b83e30dc42)
 Here are 3 different constraints in the instructions.
 
-#### Do Inference with Your Model
+#### Get Model Outputs
 
 You need to do inference with your model to get the responses to the complex instructions. Here, we provide a script to do inference for LLaMA via the script `do_inference.sh`:
 
@@ -69,7 +73,7 @@ CUDA_VISIBLE_DEVICES=YOUR_CUDA_DEVICES python ../get_data/do_inference.py \
 
 We propose a discrimination-based approach for obtaining the output, shown to be more effective than directly generating output with advanced LLMs. 
 
-First, we use rules to check whether the model has followed the constraints in the generated complex data. Simply run the script `check.sh`:
+First, we utilize the test scripts from [IFEval](https://github.com/google-research/google-research/tree/master/instruction_following_eval) to identify the constraints the model failed to follow since the constraints are objective and automatically verifiable. Simply run the script `check.sh`:
 
 ```shell
 python ../get_data/check.py \
@@ -79,7 +83,7 @@ python ../get_data/check.py \
     --output_file_name=checked_res_llama2
 ```
 
-Then, We employ the GPT3.5-turbo to correct the wrong response produced by the model. You can correct the response to simultaneously get data for IFT and DPO with the script `correct.sh`:
+Then, we adopt advanced LLMs (teacher model) GPT-3.5-turbo to correct the failed constraints one by one. You can correct the response to simultaneously get data for IFT and DPO with the script `correct.sh`:
 
 ```shell
 python ../get_data/correct.py \
@@ -91,7 +95,7 @@ python ../get_data/correct.py \
 
 
 ### Contrastive Method (Go for DPO Training)
-The slight changes in the instruction (i.e. json to xml) can cause substantial output differences. Hence, negative samples ffailing to meet certain constraints, also offer valuable supervision signals. we leverage the positive and negative samples through reinforcement learning fine-tuning, DPO.
+The slight changes in the instruction (i.e. `json` to `xml`) can cause substantial output differences. Hence, negative samples ffailing to meet certain constraints, also offer valuable supervision signals. we leverage the positive and negative samples through reinforcement learning fine-tuning.
 
 Here, we provide a revised implementation for an advanced DPO in `dpo_train`. You can set your model_path and data_path in `dpo_train/dpo_train.py`. Then, you can train the model with the script `train_dpo.sh`:
 

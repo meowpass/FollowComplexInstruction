@@ -34,7 +34,7 @@ conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cud
 pip install -r requirements.txt
 ```
 
-### Get Complex Instructions
+### Obtain Complex Instructions
 
 #### Complex Instruction Synthesis
 

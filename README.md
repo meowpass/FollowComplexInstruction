@@ -13,6 +13,15 @@ Official implementation of the paper "From Complex to Simple: Enhancing Multi-Co
 
 ## ⚙️How to Use The Code
 
+### Install Dependencies
+
+```
+conda create -n fcs python=3.10.9
+conda activate fcs
+conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
+pip install -r requirements.txt
+```
+
 ### Get The Data
 
 #### Generate the Complex Data

@@ -95,7 +95,7 @@ python ../get_data/correct.py \
 
 
 ### Contrastive Method (Go for DPO Training)
-The slight changes in the instruction (i.e. `json` to `xml`) can cause substantial output differences. Hence, negative samples ffailing to meet certain constraints, also offer valuable supervision signals. we leverage the positive and negative samples through reinforcement learning fine-tuning.
+The slight changes in the instruction (i.e. `json` to `xml`) can cause substantial output differences. Hence, negative samples failing to meet certain constraints, also offer valuable supervision signals. we leverage the positive and negative samples through reinforcement learning fine-tuning.
 
 Here, we provide a revised implementation for an advanced DPO in `dpo_train`. You can set your model_path and data_path in `dpo_train/dpo_train.py`. Then, you can train the model with the script `train_dpo.sh`:
 

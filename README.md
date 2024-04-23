@@ -1,7 +1,9 @@
 # From Complex to Simple: Enhancing Multi-Constraint Complex Instruction Following Ability of Large Language Models
-Official implementation of the paper "From Complex to Simple: Enhancing Multi-Constraint Complex Instruction Following Ability of Large Language Models". We propose a framework to efficiently construct complex instructions meanwhile obtaining instance pairs for DPO training.
 [![Github](https://img.shields.io/static/v1?logo=github&style=flat&color=pink&label=github&message=meowpass/FollowComplexInstruction)]([https://github.com/YJiangcm/FollowBench](https://github.com/meowpass/FollowComplexInstruction))
 [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97-huggingface-yellow)](https://huggingface.co/datasets/Abbey4799/Complex-Instructions-DPO)
+
+Official implementation of the paper "From Complex to Simple: Enhancing Multi-Constraint Complex Instruction Following Ability of Large Language Models". We propose a framework to efficiently construct complex instructions meanwhile obtaining instance pairs for DPO training.
+
 
 ![image](https://github.com/meowpass/FCS/assets/56729976/debacf40-1858-402b-b94a-700e7b7ad20b)
 

@@ -104,4 +104,14 @@ CUDA_VISIBLE_DEVICES=YOUR_CUDA_DEVICES accelerate launch \
     --config_file ../dpo_train/deepspeed_zero1.yaml dpo_train.py \
     --output_dir=PATH_TO_SAVE_MODEL \
 ```
-
+## Citation
+```
+@misc{he2024complex,
+      title={From Complex to Simple: Enhancing Multi-Constraint Complex Instruction Following Ability of Large Language Models}, 
+      author={Qianyu He and Jie Zeng and Qianxi He and Jiaqing Liang and Yanghua Xiao},
+      year={2024},
+      eprint={2404.15846},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```

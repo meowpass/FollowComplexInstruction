@@ -21,7 +21,8 @@ We systematically study **how to enhance the ability of LLMs to follow complex i
 ![image](https://github.com/meowpass/FCS/assets/56729976/debacf40-1858-402b-b94a-700e7b7ad20b)
 
 ## 🔥Updates
-* 2024/4/24: We posted the first version of our [paper](https://arxiv.org/abs/2404.15846)
+* 2024/6/18: We posted the second version of our [paper](https://arxiv.org/pdf/2404.15846)
+* 2024/4/24: We posted the first version of our paper.
 * 2024/4/22: We released the data and code of FCS
 
 ## ⚙️How to Use the Code
